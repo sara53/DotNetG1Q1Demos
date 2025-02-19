@@ -16,41 +16,41 @@ button {
 	padding: 5px;
 	cursor: pointer;
 	margin: 10px;
-	color:#fff;
+	color: #fff;
 	border-radius: 5px;
 }
 
-.p1{
+.p1 {
 	background-color: #f5f2f2;
 	padding: 30px;
 
 	margin: 10px;
 }
 
-p.test{
+p.test {
 	font-size: 12px;
 }
-input[type='text']{
-    display: block;
-    margin: 10px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    outline: 0;
+input[type="text"] {
+	display: block;
+	margin: 10px;
+	border: 1px solid #ccc;
+	padding: 10px;
+	border-radius: 5px;
+	outline: 0;
 }
-span{
-    display: block;
-    margin: 20px;
-    color:red;
+span {
+	display: block;
+	margin: 20px;
+	color: red;
 }
 
-img{
+img {
 	width: 200px;
 	height: 200px;
 	object-fit: cover;
 }
 
-.jsClass{
-	background-color: palevioletred;
-	padding:20px
+.jsClass {
+	background-color: red;
+	padding: 20px;
 }

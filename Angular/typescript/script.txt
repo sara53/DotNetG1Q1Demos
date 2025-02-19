@@ -1,0 +1,113 @@
+/*Install*/
+
+// 1- Install typescript
+// 2- datatype
+//     == string
+//     == number
+//     == boolean
+//     == undefined
+//     == null
+//     == any
+// -- union operator
+// -- define custom type
+// 3- array
+// 4- object
+// 5- tuples
+// 6- functions
+// 7- OOP
+// 8- Interface
+// 9-Enum
+// 1- Project Structures
+// --------------------------------------------
+
+// var fname: string = "ahmed";
+// fname = "mona";
+// fname = 10;
+// fname = true;
+
+// console.log(fname);
+
+// let num: number = 10;
+
+// num = 20;
+
+// num = "40";
+// num = boolean;
+// let flag: boolean = true;
+
+// let fname;
+
+// fname = "mona";
+// fname = 10;
+
+// let fname;
+// console.log(fname);
+
+// type stringOrNumber = string | number | boolean;
+
+// let fname: stringOrNumber = "mona";
+
+// let x: stringOrNumber;
+// let y: stringOrNumber;
+
+// fname = "ali";
+// fname = 10;
+// let arr: (string | number)[] = ["mona", "ali"];
+// let arr2: any[] = ["mona", "ali"];
+
+// arr2.push("alaa");
+// arr2.push(2);
+
+// let arr = [];
+
+// arr.push("hoda");
+// let person: { fname: any; age: string | number };
+
+// person = { fname: "ali", age: 20 };
+// person.fname = 10;
+
+// person.age = "hello"; //
+// let products: { id: number; name: string; price: number }[] = [];
+
+// products.push({ id: 1, name: "book", price: 200 });
+// let arr: [string, number] = ["mona", 10];
+
+// function sum(x: number, y: number): string[] {
+// 	return ["ITI"];
+// }
+
+// sum(4, 5);
+// function sum(x: number, y: number, ...rest: string[]): number {
+// 	console.log(rest);
+// 	return x + y;
+// }
+
+// sum(4, 5, "mona", "ali");
+// sum(2, 3);
+// sum("mona", "ali");
+// sum(true, true);
+
+// function sum(x: number = 0, y: number = 0): number {
+// 	return x + y;
+// }
+
+// sum();
+// function sum(x: number, y?: number): number {
+// 	if (y) {
+// 		return x + y;
+// 	} else {
+// 		return x;
+// 	}
+// }
+
+// sum(3);
+
+// let arr: [string, number] = ["mona", 20];
+
+// function showData(name: string, age: number) {
+// 	console.log(`${name} ${age}`);
+// }
+
+// console.log(arr);
+
+// showData(...arr); // showData("mona",20)
