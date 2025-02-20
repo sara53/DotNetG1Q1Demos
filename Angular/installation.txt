@@ -1,3 +1,8 @@
 1- install nodejs
 2- npm i -g typescript
 3- tsc file.ts -w
+-------------------------------------
+== npm i -g @angular/cli
+---------------------------------------
+ng new projectName
+ng serve -o

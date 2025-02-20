@@ -1,0 +1,12 @@
+section {
+  background-color: #aaa;
+  padding: 30px;
+}
+button {
+  width: 150px;
+  padding: 0.5rem;
+  border: none;
+
+  display: block;
+  margin: 20px;
+}
