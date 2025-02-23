@@ -1,0 +1,27 @@
+<!-- <div class="container alert alert-dark mt-5 p-5">
+  <h2 class="text-center mb-5">Two way Binding</h2>
+  <input
+    (input)="getInputValue($event)"
+    type="text"
+    class="form-control mb-3"
+    placeholder="Enter Your Data"
+  />
+  <p class="fs-2 mt-4">
+    Your Data is : <strong class="text-danger">{{ inputValue }}</strong>
+  </p>
+</div> -->
+<hr />
+<div class="container alert alert-dark mt-5 p-5">
+  <h2 class="text-center mb-5">Two way Binding</h2>
+  <input
+    name="studentName"
+    type="text"
+    class="form-control mb-3"
+    placeholder="Enter Your Data"
+    [value]="inputValue"
+    [(ngModel)]="inputValue"
+  />
+  <p class="fs-2 mt-4">
+    Your Data is : <strong class="text-danger">{{ inputValue }}</strong>
+  </p>
+</div>

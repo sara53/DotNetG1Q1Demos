@@ -1,0 +1,33 @@
+<div class="bg-dark container p-5 mt-5 rounded text-light">
+  <h2 class="text-warning text-center">My Todos List</h2>
+
+  <div class="row mt-5">
+    <div class="col-sm-8">
+      <input
+        name="todo"
+        type="text"
+        placeholder="Add Your Task"
+        class="form-control"
+        [(ngModel)]="currentTask"
+      />
+    </div>
+    <div class="col-sm-4">
+      <button class="btn btn-success" (click)="addTask()">Add Task</button>
+    </div>
+  </div>
+
+  @for (task of tasksList; track $index) {
+  <div class="row mt-5">
+    <div class="col-sm-8">
+      <div class="bg-light rounded text-dark p-2">{{ task }}</div>
+    </div>
+    <div class="col-sm-4">
+      <button class="btn btn-danger d-block" (click)="removeTask($index)">
+        Remove Task
+      </button>
+    </div>
+  </div>
+  }@empty {
+  <div class="alert alert-danger mt-5">No Tasks Available</div>
+  }
+</div>

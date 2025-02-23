@@ -1,0 +1,125 @@
+<!-- <div class="container border p-5 mt-5 rounded">
+  <h1 class="text-center">Main Tracks</h1>
+  <div class="row">
+    <div *ngFor="let x of itiTracks; let i = index; let myEven=even ; let myOdd = odd" class="col-sm-6 g-4">
+      <div class="alert alert-success">
+        <h5>{{ i }} : {{ x }}</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptas
+          mollitia fugit iusto, debitis minus animi, reprehenderit iure dolorem
+          voluptatem consectetur! Illum itaque ab, pariatur ea temporibus est
+          aliquid voluptate!
+        </p>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- <div class="container border p-5 mt-5 rounded">
+  <h1 class="text-center">Main Tracks</h1>
+  <div class="row">
+    @for (track of itiTracks; track $index; let isEven=$even ) {
+
+    <div class="col-sm-6 g-4">
+      <div class="alert alert-success">
+        <h5>{{ $index }} : {{ track.trackName }}</h5>
+        <h6>Even : {{ isEven }}</h6>
+    <h6>Odd : {{ $odd }}</h6> 
+ <h6>Is This Card the first Element : {{ $first }}</h6> 
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptas
+          mollitia fugit iusto, debitis minus animi, reprehenderit iure dolorem
+          voluptatem consectetur! Illum itaque ab, pariatur ea temporibus est
+          aliquid voluptate!
+        </p>
+      </div>
+    </div>
+
+    }
+  </div>
+</div> -->
+<!-- <div class="container border p-5 mt-5 rounded">
+  <h1 class="text-center">Main Tracks</h1>
+  <div class="row">
+    @for (name of names; track $index; let isEven=$even ) {
+
+    <div class="col-sm-6 g-4">
+      <div class="alert alert-success">
+        <h5>{{ $index }} : {{ name }}</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptas
+          mollitia fugit iusto, debitis minus animi, reprehenderit iure dolorem
+          voluptatem consectetur! Illum itaque ab, pariatur ea temporibus est
+          aliquid voluptate!
+        </p>
+      </div>
+    </div>
+    }@empty {
+    <div class="alert alert-warning mt-5">
+      <p>No Students Available</p>
+    </div>
+
+    }
+  </div>
+</div> -->
+
+<!-- Save Navigation Property -->
+<!-- <div class="container border p-5 mt-5 rounded">
+  <h1 class="text-center">Main Tracks</h1>
+
+  <p class="fs-1 mt-5 lead">Student Name : {{ student?.name }}</p>
+  <p class="fs-1 mt-5 lead">Student Age : {{ student?.age }}</p>
+</div> -->
+<!-- @if -->
+<!-- <div class="container border p-5 mt-5 rounded">
+  <h1 class="text-center">Main Tracks</h1>
+
+  @if (color == 'red' && show) {
+
+  <p class="p-4 bg-danger rounded mt-4">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem,
+    excepturi. Placeat sunt nulla similique laborum necessitatibus, blanditiis
+    perferendis? Cupiditate deleniti magni sapiente accusamus doloribus et
+    laudantium facere quia quae aliquam.
+  </p>
+  }@else if (color == 'green') {
+  <p class="p-4 bg-success rounded mt-4">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem,
+    excepturi. Placeat sunt nulla similique laborum necessitatibus, blanditiis
+    perferendis? Cupiditate deleniti magni sapiente accusamus doloribus et
+    laudantium facere quia quae aliquam.
+  </p>
+  } @else {
+  <div class="alert alert-dark p-2">Else Case Block</div>
+  }
+
+  <button (click)="toggle()" class="btn btn-danger">Toggle</button>
+</div> -->
+<div class="container border p-5 mt-5 rounded">
+  <h1 class="text-center">Main Tracks</h1>
+
+  @switch (color) { @case ('red') {
+  <p class="p-4 bg-danger rounded mt-4">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem,
+    excepturi. Placeat sunt nulla similique laborum necessitatibus, blanditiis
+    perferendis? Cupiditate deleniti magni sapiente accusamus doloribus et
+    laudantium facere quia quae aliquam.
+  </p>
+  } @case ('green') {
+  <p class="p-4 bg-success rounded mt-4">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem,
+    excepturi. Placeat sunt nulla similique laborum necessitatibus, blanditiis
+    perferendis? Cupiditate deleniti magni sapiente accusamus doloribus et
+    laudantium facere quia quae aliquam.
+  </p>
+  } @case ('blue') {
+  <p class="p-4 bg-primary rounded mt-4">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem,
+    excepturi. Placeat sunt nulla similique laborum necessitatibus, blanditiis
+    perferendis? Cupiditate deleniti magni sapiente accusamus doloribus et
+    laudantium facere quia quae aliquam.
+  </p>
+  } @default {
+  <div class="alert alert-dark">Default Case</div>
+  } }
+  <button (click)="toggle()" class="btn btn-danger">Toggle</button>
+</div>
