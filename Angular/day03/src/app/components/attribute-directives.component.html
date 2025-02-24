@@ -1,0 +1,50 @@
+<div class="container border p-5 mt-5 rounded">
+  <h1>Our Content</h1>
+
+  <!-- <p class="p-4" [style.backgroundColor]="show ? 'red' : 'green'">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam blanditiis
+    reprehenderit quaerat unde nobis accusantium nisi repudiandae rerum ea illum
+    voluptates, soluta, ad perspiciatis, ipsum eaque. Ad perspiciatis
+    perferendis quas?
+  </p> -->
+  <p
+    class="p-4"
+    [ngStyle]="{
+      color: show && color == 'red' ? 'red' : 'green',
+      backgroundColor: color == 'red' ? '#000' : '#fff'
+    }"
+  >
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam blanditiis
+    reprehenderit quaerat unde nobis accusantium nisi repudiandae rerum ea illum
+    voluptates, soluta, ad perspiciatis, ipsum eaque. Ad perspiciatis
+    perferendis quas?
+  </p>
+  <button class="btn btn-danger" (click)="toggle()">Toggle</button>
+  <!-- <p [class.customBg]="color == 'red' && show">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste dolorem
+    voluptatibus vitae quo soluta deleniti eius numquam, accusamus excepturi
+    unde fuga quisquam error dolorum praesentium veritatis est architecto quia
+    modi.
+  </p> -->
+  <!-- <p
+    [ngClass]="{
+      'bg-danger p-3': show,
+      customBg: !show
+    }"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste dolorem
+    voluptatibus vitae quo soluta deleniti eius numquam, accusamus excepturi
+    unde fuga quisquam error dolorum praesentium veritatis est architecto quia
+    modi.
+  </p>
+  <button
+    [ngClass]="{
+      'bg-danger p-3': show,
+      customBg: !show
+    }"
+    (click)="toggle()"
+    class="btn btn-danger"
+  >
+    {{ show ? "Buy Now " : "Solid Out" }} -->
+  <!-- </button> -->
+</div>
