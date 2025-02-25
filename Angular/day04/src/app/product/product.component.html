@@ -1,0 +1,33 @@
+<!-- <div class="container border p-3 mt-5">
+  <h1>Product Details</h1>
+  <p class="lead mt-4 fs-3">
+    Product Name : <strong>{{ myProduct.name | uppercase }}</strong> Product
+    Name : <strong>{{ myProduct.name | lowercase }}</strong> Name :
+    <strong>{{ myProduct.name }}</strong>
+  </p>
+  <p>{{ date | date : "yyyy-MM" }}</p>
+  <p class="lead mt-4 fs-3">
+    Product Price :
+    <strong>{{ myProduct.price | currency : "Eur" : "E" }}</strong>
+  </p>
+  <p>{{ myProduct | json }}</p>
+</div> -->
+<div class="container mb-5 border p-3 mt-5">
+  <h1>Product Details</h1>
+  <p class="lead mt-4 fs-3">
+    Product Name : <strong>{{ myProduct.name | uppercase }}</strong>
+  </p>
+
+  @if (flag) {
+  <p class="fs-3">
+    Previous Price :
+    <strong class="text-danger text-decoration-line-through">{{
+      previousValue?.price | currency
+    }}</strong>
+  </p>
+  }
+
+  <p class="lead mt-4 fs-3">
+    Product Price : <strong>{{ myProduct.price | currency }}</strong>
+  </p>
+</div>

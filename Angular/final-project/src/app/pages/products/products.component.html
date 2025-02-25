@@ -1,0 +1,37 @@
+<div class="mt-5 container p-5">
+  <h1 class="text-center text-muted mb-4">Our Products</h1>
+  <div class="d-flex justify-content-between">
+    <button class="btn btn-outline-primary">Add New Product</button>
+    <input type="text" class="form-control w-25" placeholder="Search ...." />
+  </div>
+  <table class="table mt-5">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Product Price</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (product of products; track product.id) {
+      <tr>
+        <th scope="row">{{ product.id }}</th>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>
+          <i
+            class="text-info fs-4 mx-2 bi bi-pencil-square"
+            [routerLink]="['/products', product.id, 'edit']"
+          ></i>
+          <i
+            class="text-warning fs-4 mx-2 bi bi-eye-fill"
+            [routerLink]="['/products', product.id]"
+          ></i>
+          <i class="text-danger fs-4 mx-2 bi bi-trash-fill"></i>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
