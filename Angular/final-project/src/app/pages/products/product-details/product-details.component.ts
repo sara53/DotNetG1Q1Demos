@@ -1,17 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ProductService } from '../../../../service/product-service.service';
+import { IProduct } from '../../../models/iproduct';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-product-details',
-  imports: [],
+  imports: [CommonModule, RouterLink],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css',
 })
 export class ProductDetailsComponent implements OnInit {
   productId: any;
-  constructor(private activatedRoute: ActivatedRoute) {}
+  product?: IProduct;
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private productService: ProductService
+  ) {}
   ngOnInit(): void {
     this.productId = this.activatedRoute.snapshot.paramMap.get('id');
-    console.log(this.productId);
+    this.productService.getProductById(this.productId).subscribe({
+      next: (response) => {
+        this.product = response;
+      },
+      error: () => {},
+    });
   }
 }
